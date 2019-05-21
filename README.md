@@ -39,7 +39,7 @@ For the Food data lambda=0.001 value was used to balance between Softmax Loss an
   <img width="800" height="50" src="readme_pictures/loss_food_data.png">
 </p>
 <br>
-*<b>The highest top  1 validation accuracy (86.73%) was achieved at epoch = 17</b>*
+<b>The highest top  1 validation accuracy (86.73%) was achieved at epoch = 17</b>
 <p align="center">
   <img width="800" height="120" src="readme_pictures/best_accuracy.png">
 </p>
