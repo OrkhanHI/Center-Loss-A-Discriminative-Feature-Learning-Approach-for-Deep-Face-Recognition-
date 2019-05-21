@@ -36,12 +36,12 @@ From the above Center Loss function it is obvious that optimization can be done 
 For the Food data lambda=0.001 value was used to balance between Softmax Loss and Center Loss. For both functions Adagrad optimizer was used with learning rate = 0.001. 
 
 <p align="center">
-  <img width="500" height="120" src="readme_pictures/lost_food_data.png">
+  <img width="800" height="50" src="readme_pictures/loss_food_data.png">
 </p>
 
-*The highest validation accuracy was achieved with epoch = 17*
+*The highest top  1 validation accuracy (86.73%) was achieved at epoch = 17*
 <p align="center">
-  <img width="500" height="120" src="readme_pictures/best_accuracy.png">
+  <img width="800" height="120" src="readme_pictures/best_accuracy.png">
 </p>
 
 #### Justification for Center Loss not performing as good as Softmax Loss
