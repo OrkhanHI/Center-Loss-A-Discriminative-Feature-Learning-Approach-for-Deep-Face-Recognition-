@@ -18,3 +18,9 @@ The proposed Center Loss function minimizing the intra-class variations while ke
 <p align="center">
   <img width="200" height="100" src="readme_pictures/DistancetoCenter.png">
 </p>
+Cyi - yi class center of deep features. The centers are updated based on each mini-batch, in each iteration the centers are computed by averaging the features of the corresponding classes. In addition, to avoid large shifts caused by misclassified classes, the alpha scalar is used to control the learning rate of the centers.<br>
+Both loss functions are combined to make the model more robust and generalize better for unseen data.
+
+<p align="center">
+  <img width="200" height="100" src="readme_pictures/Lost_Function.png">
+</p>
