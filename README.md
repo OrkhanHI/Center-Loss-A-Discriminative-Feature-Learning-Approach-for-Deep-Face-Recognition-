@@ -10,17 +10,32 @@ There are a lot of algorithms that can be utilised such as :
 As given food data have low-inter class and high intra-class variance, besides Softmax loss function there is a need to enhance the discriminative power of the deeply learned features. Center Loss learns a center for deep features of each class and penalizes the distances between the deep features and their corresponding class centers. Deeply learned features are required to be discriminative and generalized enough for identifying new unseen data.
 
 <p align="center">
-  <img width="460" height="300" src="readme_pictures/DLF.png">
+  <img width="400" height="300" src="readme_pictures/DLF.png">
 </p>
 
 The proposed Center Loss function minimizing the intra-class variations while keeping the features of different classes separable and the function looks as below:
 
 <p align="center">
-  <img width="200" height="100" src="readme_pictures/DistancetoCenter.png">
+  <img width="300" height="80" src="readme_pictures/DistancetoCenter.png">
 </p>
+
 Cyi - yi class center of deep features. The centers are updated based on each mini-batch, in each iteration the centers are computed by averaging the features of the corresponding classes. In addition, to avoid large shifts caused by misclassified classes, the alpha scalar is used to control the learning rate of the centers.<br>
-Both loss functions are combined to make the model more robust and generalize better for unseen data.
+Both loss functions are combined to make the model more robust and generalize better for unseen data.<br>
 
 <p align="center">
-  <img width="200" height="100" src="readme_pictures/Lost_Function.png">
+  <img width="500" height="120" src="readme_pictures/Lost_Function.png">
 </p>
+
+From the above Center Loss function it is obvious that optimization can be done easily to that function. In the combined loss function lambda scalar is used for balancing the two loss functions which also make run only Softmax loss by setting lambda to zero. With proper lambda value the discriminative power of deep features can be significantly enhanced.<br>
+
+<p align="left">
+  <img width="200" height="100" src="readme_pictures/deep_features_1.png">
+</p>
+<p align="right">
+  <img width="200" height="100" src="readme_pictures/deep_features_2.png">
+</p>
+
+
+
+
+
