@@ -10,11 +10,11 @@ There are a lot of algorithms that can be utilised such as :
 As given food data have low-inter class and high intra-class variance, besides Softmax loss function there is a need to enhance the discriminative power of the deeply learned features. Center Loss learns a center for deep features of each class and penalizes the distances between the deep features and their corresponding class centers. Deeply learned features are required to be discriminative and generalized enough for identifying new unseen data.
 
 <p align="center">
-  <img width="460" height="300" src="DLF.png">
+  <img width="460" height="300" src="readme_pictures/DLF.png">
 </p>
 
 The proposed Center Loss function minimizing the intra-class variations while keeping the features of different classes separable and the function looks as below:
 
 <p align="center">
-  <img width="460" height="300" src="DtC.png">
+  <img width="200" height="100" src="readme_pictures/DistancetoCenter.png">
 </p>
