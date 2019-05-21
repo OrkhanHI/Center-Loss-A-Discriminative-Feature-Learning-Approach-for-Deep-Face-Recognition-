@@ -28,14 +28,22 @@ Both loss functions are combined to make the model more robust and generalize be
 
 From the above Center Loss function it is obvious that optimization can be done easily to that function. In the combined loss function lambda scalar is used for balancing the two loss functions which also make run only Softmax loss by setting lambda to zero. With proper lambda value the discriminative power of deep features can be significantly enhanced.<br>
 
-<p align="left">
-  <img width="200" height="100" src="readme_pictures/deep_features_1.png">
-</p>
-<p align="right">
-  <img width="200" height="100" src="readme_pictures/deep_features_2.png">
+
+<p align="center">
+  <img width="350" height="350" src="readme_pictures/deep_features_1.png"><img width="400" height="350" src="readme_pictures/deep_features_2.png">
 </p>
 
+For the Food data lambda=0.001 value was used to balance between Softmax Loss and Center Loss. For both functions Adagrad optimizer was used with learning rate = 0.001. 
 
+<p align="center">
+  <img width="500" height="120" src="readme_pictures/lost_food_data.png">
+</p>
 
+*The highest validation accuracy was achieved with epoch = 17*
+<p align="center">
+  <img width="500" height="120" src="readme_pictures/best_accuracy.png">
+</p>
 
-
+#### Justification for Center Loss not performing as good as Softmax Loss
+Even though Center loss indeed taking into account intra-class compactness, but it does not affect inter-class separability. For given Food data set there are many dishes from the same ingredients such as pork dishes which is quite difficult to differentiate, in addition drink classes adding additional confusion because almost all of them look similar. 
+For the future work, I-Center Loss could be used that propose not only better intra-class compactness but also better inter-class separability. 
