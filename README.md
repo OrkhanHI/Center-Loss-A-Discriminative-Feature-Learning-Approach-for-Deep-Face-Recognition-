@@ -13,3 +13,8 @@ As given food data have low-inter class and high intra-class variance, besides S
   <img width="460" height="300" src="DLF.png">
 </p>
 
+The proposed Center Loss function minimizing the intra-class variations while keeping the features of different classes separable and the function looks as below:
+
+<p align="center">
+  <img width="460" height="300" src="DtC.png">
+</p>
